@@ -4,7 +4,7 @@
   "description": "CodeSpark is a VS Code extension that surprises you with cool programming concepts when you feel stuck or bored.",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.60.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Education",
@@ -17,28 +17,19 @@
         {
           "id": "code-spark-explorer",
           "title": "CodeSpark",
-          "icon": "media/icon.svg"
+          "icon": "src/media/icon.svg"
         }
       ]
     },
     "views": {
       "code-spark-explorer": [
         {
-          "id": "codeSparkExplorer",
+          "type": "webview",
+          "id": "conceptsView",
           "name": "Concepts Explorer"
         }
       ]
-    },
-    "commands": [
-      {
-        "command": "codespark.openConcept",
-        "title": "Open Concept"
-      },
-      {
-        "command": "codespark.filterByLanguage",
-        "title": "Filter By Language"
-      }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
