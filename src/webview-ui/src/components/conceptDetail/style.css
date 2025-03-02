@@ -1,0 +1,90 @@
+/* ConceptDetail.css */
+.concept-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .back-button {
+    position: sticky;
+    top: 10px; /* Sticks when scrolling */
+    left: 10px;
+    z-index: 1000;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 500;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .back-button:hover {
+    background-color: #1e40af;
+  }
+  
+  .card {
+    border-radius: 8px;
+    min-height: 82vh;
+    padding: 4px 0px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    /* color: #1f2937; */
+  }
+  
+  .card-description {
+    color: #a8a8a8;
+    margin-bottom: 24px;
+    font-size: 0.84 rem;
+  }
+  
+  .steps-container {
+    margin-bottom: 32px;
+  }
+  
+  .step-title {
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .step-description {
+    color: #a8a8a8;
+    font-size: 0.84rem;
+  }
+  
+  .step-item {
+    padding:6px 0px;
+    margin: 16px 0;
+  }
+  
+  .task-container {
+    background-color: #fef9c3;
+    border-left: 4px solid #facc15;
+    padding:6px 0px 6px 16px;
+  }
+  
+  .task-text {
+    color: #374151;
+    font-size: 0.84rem;
+  }
+  
+  .not-found {
+    padding: 16px;
+  }
+  
+  .not-found p {
+    margin-bottom: 8px;
+  }
+  
+  .back-to-list-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
