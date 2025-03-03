@@ -3,7 +3,6 @@ import * as fs from "fs";
 import * as path from "path";
 
 export function activate(context: vscode.ExtensionContext) {
-    console.log(context.extensionUri);
 
     const provider = new SidebarProvider(context)
     // register the sidebar 
@@ -17,7 +16,6 @@ export function activate(context: vscode.ExtensionContext) {
 
 class SidebarProvider implements vscode.WebviewViewProvider {
     constructor(private context: vscode.ExtensionContext) {
-        console.log(" - SidebarProvider constructor");
     }
 
     public resolveWebviewView(webviewView: vscode.WebviewView) {
@@ -38,7 +36,6 @@ class SidebarProvider implements vscode.WebviewViewProvider {
             "build",
             "index.html"
         );
-        console.log("path----", indexPath);
         
         // Read and transform the HTML content
         let htmlContent = fs.readFileSync(indexPath, "utf-8");

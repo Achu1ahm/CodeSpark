@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "codespark" extension will be documented in this file.
+## [0.1.0] - 03-03-25
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### - Initial release
 
-## [Unreleased]
-
-- Initial release
+### Added
+- Introduced VS Code extension with core functionality.
+- Integrated React-based WebView for UI rendering.
