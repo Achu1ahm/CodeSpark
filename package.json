@@ -1,70 +1,71 @@
 {
   "name": "codespark",
-  "displayName": "CodeSpark",
+  "displayName": "Code Spark",
   "description": "CodeSpark is a VS Code extension that surprises you with cool programming concepts when you feel stuck or bored.",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "publisher": "AsfaqAhmed",
   "engines": {
-    "vscode": "^1.97.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
+    "Programming Languages",
     "Education",
     "Other"
   ],
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Achu1ahm/CodeSpark.git"
+},
+"bugs": {
+  "url": "https://github.com/Achu1ahm/CodeSpark/issues"
+},
+"icon": "media/icon.png",
+"license": "GPL-3.0-or-later",
   "main": "./dist/extension.js",
   "contributes": {
-    "viewContainers": {
+    "viewsContainers": {
       "activitybar": [
         {
-          "id": "codeSparkExplorer",
+          "id": "code-spark-explorer",
           "title": "CodeSpark",
-          "icon": "resources/icons/codeSpark.svg"
+          "icon": "media/icon.svg"
         }
       ]
     },
     "views": {
-      "codeSparkExplorer": [
+      "code-spark-explorer": [
         {
-          "id": "codeSparkExplorer",
-          "name": "CodeSpark",
-          "when": "view == codeSparkExplorer",
-          "icon": "resources/icons/codeSpark.svg"
+          "type": "webview",
+          "id": "conceptsView",
+          "name": "Explorer"
         }
       ]
-    },
-    "commands": [
-      {
-        "command": "codespark.openConcept",
-        "title": "Open Concept"
-      },
-      {
-        "command": "codespark.filterByLanguage",
-        "title": "Filter By Language"
-      }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "npm run compile-tests && npm run compile && npm run lint",
-    "lint": "eslint src",
-    "test": "vscode-test"
+    "test-compile": "tsc -p ./",
+    "test-watch": "tsc -watch -p ./",
+    "pretest": "npm run test-compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.97.0",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "20.x",
-    "@typescript-eslint/eslint-plugin": "^8.22.0",
-    "@typescript-eslint/parser": "^8.22.0",
-    "eslint": "^9.19.0",
-    "typescript": "^5.7.3",
-    "ts-loader": "^9.5.2",
-    "webpack": "^5.97.1",
-    "webpack-cli": "^6.0.1",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.1",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.3",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
   }
 }

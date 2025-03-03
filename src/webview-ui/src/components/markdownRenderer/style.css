@@ -1,0 +1,88 @@
+/* Code block container */
+.code-container {
+    position: relative;
+    background: #1e1e1e; /* Dark background like ChatGPT */
+    border-radius: 8px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  /* Header above code block */
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    font-size: 8px;
+    padding: 1px 5px;
+    background-color: rgb(70, 70, 70);
+  }
+  
+  /* Copy button */
+  .copy-button {
+    border: none;
+    padding: 4px 8px;
+    color: inherit;
+    font-size: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+    background: none;
+  }
+  
+  /* Code block styling */
+  .code-block {
+    background: #1e1e1e;
+    color: #ffffff;
+    overflow-x: auto;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0 0 6px 6px;
+    font-family: "Fira Code", monospace;
+    font-size: 12px;
+  }
+  
+  /* Inline code */
+  .inline-code {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    border-radius: 4px;
+    font-family: "Fira Code", monospace;
+  }
+  
+/*custom scrollbar styles */
+html, body, .code-block {
+    scrollbar-color: #3b3b3b #252526 !important; /* For Firefox */
+    scrollbar-width: thin !important;
+  }
+  
+  /* Webkit-based (Chrome, Edge) */
+  .code-block::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  .code-block::-webkit-scrollbar-track {
+    background: #252526 !important;
+    border-radius: 8px !important;
+  }
+  
+  .code-block::-webkit-scrollbar-thumb {
+    background: #3b3b3b !important;
+    border-radius: 8px !important;
+    border: 2px solid #252526 !important;
+  }
+  
+  .code-block::-webkit-scrollbar-thumb:hover {
+    background: #555 !important;
+  }
+  
+  /* Force scrollbar override inside VS Code Webview */
+  ::part(scrollbar) {
+    all: unset !important;
+    scrollbar-color: #3b3b3b #252526 !important;
+    scrollbar-width: thin !important;
+  }
+  
